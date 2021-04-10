@@ -30,3 +30,6 @@
 ### External api clients ###
 authorization-api/build
 backend-api/build
+
+# Ignore Gradle build output directory
+build
