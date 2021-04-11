@@ -24,19 +24,32 @@ public class SerializeRunner {
 
     public static void run() {
         String userJson = """
-                {"name": "Jason", "age": 42}
+                {
+                    "name": "Jason",
+                    "age": 42,
+                    "grades": [1, 2, 3],
+                    "tags": ["foo", "bar"],
+                    "moods": ["happy", "sad", "confused"]
+                }
                 """;
 
         DummyUser dummyUser = null;
         ValueUser valueUser = null;
+        BuildUserNoArgsConstructor buildUser1 = null;
+        BuildUserDeserialize buildUser2 = null;
         try {
             dummyUser = mapper.readValue(userJson, DummyUser.class);
             valueUser = mapper.readValue(userJson, ValueUser.class);
+            buildUser1 = mapper.readValue(userJson, BuildUserNoArgsConstructor.class);
+            buildUser2 = mapper.readValue(userJson, BuildUserDeserialize.class);
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
         System.out.println("<<<<<<<<<<>>>>>>>>>>");
         System.out.println(dummyUser);
         System.out.println(valueUser);
+        System.out.println(buildUser1);
+        System.out.println(buildUser2);
+        System.out.println(buildUser2.getMoods().get(0).getClass());
     }
 }
