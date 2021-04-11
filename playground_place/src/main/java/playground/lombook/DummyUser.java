@@ -1,4 +1,4 @@
-package com.playground.lombook;
+package playground.lombook;
 
 public class DummyUser {
     private String name;

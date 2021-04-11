@@ -1,4 +1,4 @@
-package com.playground.lombook;
+package playground.lombook;
 
 public class UserRunner {
     public static void run() {

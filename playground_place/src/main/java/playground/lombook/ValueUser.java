@@ -1,4 +1,4 @@
-package com.playground.lombook;
+package playground.lombook;
 
 import lombok.Value;
 
