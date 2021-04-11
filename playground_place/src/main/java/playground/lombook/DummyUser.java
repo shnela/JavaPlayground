@@ -12,6 +12,11 @@ public class DummyUser {
         return age;
     }
 
+    public DummyUser() {
+        this.name = null;
+        this.age = 0;
+    }
+
     public DummyUser(String name, int age) {
         this.name = name;
         this.age = age;

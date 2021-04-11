@@ -13,3 +13,9 @@ plugins {
 repositories {
     mavenCentral()
 }
+
+
+dependencies {
+    implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jdk8', version: '2.12.2'
+    implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.12.2'
+}
